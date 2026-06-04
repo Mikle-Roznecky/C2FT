@@ -29,7 +29,6 @@ def inputPath(start_up_text = None, key_stop_byte = b'\r', key_stop = "enter"):
             if len(buffer[0]) > 0:
                 buffer[0].pop()
                 stdout("\b \b")
-                text += ", delete!"
                 if len(buffer[1]) > 0:
                     stdout("".join(buffer[1]) + " ")
                     stdout("\b" * (len(buffer[1]) + 1))
@@ -57,7 +56,7 @@ def inputPath(start_up_text = None, key_stop_byte = b'\r', key_stop = "enter"):
         else:   
             try:
                 symbol = char.decode("cp866")
-                if ord(symbol) > 32:
+                if ord(symbol) >= 32:
                     buffer[0].append(symbol)
                     cursor += 1
                     if len(buffer[1]) == 0:
