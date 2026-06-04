@@ -1,0 +1,15 @@
+char: b'd', cursor: 1, bufferr: ['d'], bufferl: []Append symbol
+char: b'd', cursor: 2, bufferr: ['d', 'd'], bufferl: []Append symbol
+char: b'd', cursor: 3, bufferr: ['d', 'd', 'd'], bufferl: []Append symbol
+char: b'\xe0', cursor: 3, bufferr: ['d', 'd'], bufferl: ['d'], Special Symbol, next char: b'K' ,['d', 'd'], ['d']
+char: b'\xe0', cursor: 3, bufferr: ['d', 'd'], bufferl: ['d'], Special Symbol, next char: b'M'
+char: b'd', cursor: 4, bufferr: ['d', 'd', 'd'], bufferl: ['d'], rewrite symbols, New: d
+char: b'\xe0', cursor: 4, bufferr: ['d', 'd'], bufferl: ['d', 'd'], Special Symbol, next char: b'K' ,['d', 'd'], ['d', 'd']
+char: b's', cursor: 5, bufferr: ['d', 'd', 's'], bufferl: ['d', 'd'], rewrite symbols, New: dd
+char: b'\x08', cursor: 5, bufferr: ['d', 'd'], bufferl: ['d', 'd'], delete!
+char: b's', cursor: 6, bufferr: ['d', 'd', 's'], bufferl: ['d', 'd'], rewrite symbols, New: dd
+char: b's', cursor: 7, bufferr: ['d', 'd', 's', 's'], bufferl: ['d', 'd'], rewrite symbols, New: dd
+char: b'\xe0', cursor: 7, bufferr: ['d', 'd', 's'], bufferl: ['s', 'd', 'd'], Special Symbol, next char: b'K' ,['d', 'd', 's'], ['s', 'd', 'd']
+char: b'\x08', cursor: 7, bufferr: ['d', 'd'], bufferl: ['s', 'd', 'd'], delete!
+char: b'\x08', cursor: 7, bufferr: ['d'], bufferl: ['s', 'd', 'd'], delete!
+char: b'a', cursor: 8, bufferr: ['d', 'a'], bufferl: ['s', 'd', 'd'], rewrite symbols, New: sdd
