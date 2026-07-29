@@ -106,9 +106,5 @@ def inputPath(start_up_text = None, key_stop_byte = b'\r', key_stop = "enter"):
                     
             except UnicodeDecodeError:
                 pass
-        
-        savedata(f"char: {char}, cursor: {cursor}, bufferr: {buffer[0]}, bufferl: {buffer[1]}{text}")
-        time.sleep(0.001)
-                    
-        
+                            
 x = inputPath("Input Your Path: ")
